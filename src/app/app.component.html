@@ -1,17 +1,12 @@
-<div [ngClass]="{ bold: isBold, highlight: isHighlight, strike: isStrike }">
-  Hi there
+<div [ngStyle]="borderStyle">
+  Here are some inline styles!
 </div>
+
 <p>
-  <label for="">
-    <input type="checkbox" [(ngModel)]="isBold" />
-    Bold
-  </label>
-  <label for="">
-    <input type="checkbox" [(ngModel)]="isHighlight" />
-    Highlight
-  </label>
-  <label for="">
-    <input type="checkbox" [(ngModel)]="isStrike" />
-    Strike
-  </label>
+  <input type="number" #boxWidth>
+  <button (click)="updateStyle(boxWidth.value)">Set</button>
+</p>
+<p>
+  <input type="number" #paddingWidth>
+  <button (click)="updatePadding(paddingWidth.value)">Set</button>
 </p>

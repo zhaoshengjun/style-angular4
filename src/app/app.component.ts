@@ -6,11 +6,17 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  // cssClasses = "bold highlight strike";
-  // cssClasses = ["bold", "highlight", "strike"];
-  // cssClasses = { bold: true, highlight: true, strike: false };
+  borderStyle = {
+    border: "1px solid black",
+    "border-radius": "3px",
+    width: "200px",
+    "padding.px": 15
+  };
 
-  isBold = false;
-  isHighlight = true;
-  isStrike = true;
+  updateStyle(width) {
+    this.borderStyle.width = width + "px";
+  }
+  updatePadding(padding) {
+    this.borderStyle["padding.px"] = padding;
+  }
 }
