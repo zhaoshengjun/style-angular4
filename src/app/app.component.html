@@ -1,3 +1,8 @@
-<div [style.background-color]="getBgColor()" (click)="showStyle = !showStyle">
-  I'm stylish, kinda!
+<div [class.rounded-border]="isBorder">
+  I have a rounded border!
 </div>
+<p>
+  <label>      
+  <input type="checkbox" [(ngModel)]="isBorder" />
+  Add border    </label>
+</p>
