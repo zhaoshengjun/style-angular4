@@ -1,12 +1,3 @@
-<div [ngStyle]="borderStyle">
-  Here are some inline styles!
-</div>
+<div [style]="getStyle()">
 
-<p>
-  <input type="number" #boxWidth>
-  <button (click)="updateStyle(boxWidth.value)">Set</button>
-</p>
-<p>
-  <input type="number" #paddingWidth>
-  <button (click)="updatePadding(paddingWidth.value)">Set</button>
-</p>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
   selector: "app-root",
@@ -6,17 +7,13 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  borderStyle = {
-    border: "1px solid black",
-    "border-radius": "3px",
-    width: "200px",
-    "padding.px": 15
-  };
+  constructor(private sanitizer: DomSanitizer) {}
 
-  updateStyle(width) {
-    this.borderStyle.width = width + "px";
-  }
-  updatePadding(padding) {
-    this.borderStyle["padding.px"] = padding;
+  getStyle() {
+    const gravatarUrl =
+      "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50";
+    let style = `background-image:url(${gravatarUrl});width: 150px; height: 150px; border: 1px solid black`;
+    return this.sanitizer.bypassSecurityTrustStyle(style);
+    // return style;
   }
 }
