@@ -1,8 +1,17 @@
-<div [class.rounded-border]="isBorder">
-  I have a rounded border!
+<div [ngClass]="{ bold: isBold, highlight: isHighlight, strike: isStrike }">
+  Hi there
 </div>
 <p>
-  <label>      
-  <input type="checkbox" [(ngModel)]="isBorder" />
-  Add border    </label>
+  <label for="">
+    <input type="checkbox" [(ngModel)]="isBold" />
+    Bold
+  </label>
+  <label for="">
+    <input type="checkbox" [(ngModel)]="isHighlight" />
+    Highlight
+  </label>
+  <label for="">
+    <input type="checkbox" [(ngModel)]="isStrike" />
+    Strike
+  </label>
 </p>

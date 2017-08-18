@@ -6,5 +6,11 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  isBorder = false;
+  // cssClasses = "bold highlight strike";
+  // cssClasses = ["bold", "highlight", "strike"];
+  // cssClasses = { bold: true, highlight: true, strike: false };
+
+  isBold = false;
+  isHighlight = true;
+  isStrike = true;
 }

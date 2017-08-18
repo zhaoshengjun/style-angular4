@@ -1,6 +1,9 @@
-.rounded-border {
-  border: 1px solid black;
-  border-radius: 3px;
-  width: 200px;
-  padding: 15px;
+.bold {
+  font-weight: bold;
+}
+.highlight {
+  background-color: yellow;
+}
+.strike {
+  text-decoration: line-through;
 }
